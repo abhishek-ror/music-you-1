@@ -47,6 +47,10 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
+  gem 'rspec-sonarqube-formatter', '1.5.0'
+  gem 'rspec-rails', '5.1.2'
+  gem 'simplecov', '0.17.0'
+  gem "dotenv-rails"
 end
 
 group :development do
@@ -65,3 +69,35 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "sidekiq-cron", '~> 1.8.0'
+gem 'redis', '~> 4.5.1'
+gem 'sidekiq_alive'
+gem 'sidekiq', '~> 6.1.0'
+
+gem "yabeda-prometheus"    # Base
+gem "yabeda-rails"         #API endpoint monitoring
+gem "yabeda-http_requests" #External request monitoring
+gem "yabeda-puma-plugin"
+gem 'yabeda-sidekiq'
+
+gem 'devise'
+gem 'sassc-rails'
+gem 'activeadmin'
+gem 'active_admin_role'
+gem 'activeadmin_json_editor'
+gem 'active_admin_datetimepicker'
+gem 'rack-cors'
+gem 'activestorage-validator'
+gem 'activeadmin_quill_editor'
+gem 'arctic_admin'
+gem 'geocoder'
+gem 'kaminari'
+gem 'cancancan'
+gem 'whenever', require: false
+gem 'ice_cube', '~> 0.17.0'
+gem 'twilio-ruby'
+gem 'httparty'
+gem 'ticketmaster'
+gem 'webmock'
+gem 'sendgrid-ruby'
