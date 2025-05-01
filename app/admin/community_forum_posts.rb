@@ -6,12 +6,12 @@ ActiveAdmin.register BxBlockCommunityforum::Post, as: "Community Forum Posts" do
 
   member_action :approve, method: :put do
     resource.update(approved: true)
-    redirect_to admin_community_forum_posts_path, notice: "Post Approved Successfully."
+    redirect_to admin_assessment_path, notice: "Post Approved Successfully."
   end
 
   member_action :unapprove, method: :put do
     resource.update(approved: false)
-    redirect_to admin_community_forum_posts_path, notice: "Post Disapproved Successfully."
+    redirect_to admin_assessment_path, notice: "Post Disapproved Successfully."
   end
 
   index do
