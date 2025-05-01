@@ -8,10 +8,6 @@ module AccountGroups
     def self.loaded
     end
 
-    # Check if this file is loaded from gem directory or not
-    # The gem directory looks like
-    # /template-app/.gems/gems/bx_block_custom_user_subs-0.0.7/app/admin/subscription.rb
-    # if it has block's name in it then it's a gem
     @@loaded_from_gem = Load.method(:loaded).source_location.first.include?("bx_block_")
   end
 end
